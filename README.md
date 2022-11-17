@@ -22,6 +22,7 @@ dos 10 atores que mais fizeram filmes nos últimos 10 anos com base nas informa�
  
 ## Tema 07 e Tema 08: Tarefas Agendadas em Linux e Windows
 > Tema 07: criação de uma máquina linux no free-tier dentro da AWS, no qual roda de forma agendada o código criado no exercício 06. Além da realização de melhorias no código para gerar arquivos texto com resultado, e esses, forão sincronizados com minha bucket na conta AWS.
+
  > Tema 08: após instalar uma VM com Windows usando o software o VirtualBox, realizei o mesmo processo do exercício anterior. A diferença é que o agendamento dentro do Windows é realizado executando um script powershell.
  
 ## Tema 09: Jenkins
