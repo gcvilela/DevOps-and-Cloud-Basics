@@ -1,0 +1,9 @@
+__pycache__
+*.log
+*.csv
+.env
+.terraform
+*.plan
+*.tfstate
+*.terraform.lock.hcl
+*.terraform.tfstate.backup

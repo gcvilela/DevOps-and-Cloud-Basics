@@ -1,0 +1,11 @@
+Após criar minha instância no GCE e conectar ao SSH dela, realizei os seguintes comandos:
+1.Criação da pasta “Tema05” dentro da EC2:
+mkdir Tema05
+cd Tema05
+2.Sincronizar o arquivo no Bucket GCS com a GCE:
+gsutil rsync -r gs://jt-dataeng-marianamoreira/tema05 /home/mariana_moreira/Tema05
+3.Criação de um arquivo na instância:
+vim GCPBasics.md
+4.Sincronizar a instancia com o Bucket GCS:
+gsutil rsync -r /home/mariana_moreira/Tema05 gs://jt-dataeng-marianamoreira/tema05 
+

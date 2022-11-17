@@ -1,0 +1,51 @@
+pipeline {
+    agent any
+    stages {
+        stage('Create final folder'){
+            steps{
+                sh '''
+                sudo chmod u+x ${WORKSPACE}/Scripts/script/prepare.sh
+                sudo ${WORKSPACE}/Scripts/script/prepare.sh ${WORKSPACE}
+                '''
+            }
+        } 
+        stage('Build image'){
+            steps{
+                sh '''
+                sudo chmod u+x ${WORKSPACE}/Scripts/script/image.sh
+                sudo ${WORKSPACE}/Scripts/script/image.sh
+                '''
+            }
+        } 
+        stage('Run container'){
+            steps {
+                sh '''
+                sudo chmod u+x ${WORKSPACE}/Scripts/script/container.sh 
+                sudo ${WORKSPACE}/Scripts/script/container.sh ${WORKSPACE}
+                '''
+            }
+        }
+        stage('Sync') {
+            steps {
+                sh '''
+                sudo chmod u+x ${WORKSPACE}/Scripts/script/sync.sh
+                sudo ${WORKSPACE}/Scripts/script/sync.sh ${WORKSPACE}
+                '''
+            }
+        }
+        stage('Cleanup') {
+            steps {
+                sh '''
+                sudo chmod u+x ${WORKSPACE}/Scripts/script/cleanup.sh
+                sudo ${WORKSPACE}/Scripts/script/cleanup.sh 
+                '''
+            }
+        }
+    }
+    post {
+        always {
+            cleanWs()
+        }
+     
+    }
+}

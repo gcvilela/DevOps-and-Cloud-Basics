@@ -1,0 +1,11 @@
+Após conectar a minha instância EC2 pelo Putty, utilizei os seguintes comandos:
+1. Criação da pasta “Tema04” dentro da EC2:
+mkdir Tema04
+cd Tema04
+2. Sincronizar o arquivo no Bucket S3 com a EC2:
+aws s3 sync "s3://jt-dataeng-marianadmoreira/tema04" "/home/ec2-user/Tema04"
+3. Criação de um arquivo na EC2:
+vim awsbasic.txt
+4. Sincronizar a EC2 com o Bucket S3:
+aws s3 sync "/home/ec2-user/Tema04" "s3://jt-dataeng-marianadmoreira/tema04"
+
