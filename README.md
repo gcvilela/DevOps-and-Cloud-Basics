@@ -1,6 +1,6 @@
 # DevOps and Cloud Basics
 
-Nesta trilha de aprendizado aprendemos que tão importante quanto saber um conceito é saber repassar o conhecimento. Além disso, aprendemos o básico de AWS e GCP e aprender a evoluir um programa simples em Python dentro dos conceitos de DevOps.
+Nesta  trilha de aprendizado aprendemos que tão importante quanto saber um conceito é saber repassar o conhecimento. Além disso, aprendemos o básico de AWS e GCP e aprender a evoluir um programa simples em Python dentro dos conceitos de DevOps.
 
 ## Tema 01: DevOps Culture Principles
 Artigo sobre as vantagens que uma cultura DevOps pode trazer para o seu time técnico e como implementá-la.
